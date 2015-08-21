@@ -5,7 +5,7 @@
 
 loadAPI(1);
 
-load ("Framework4Bitwig/ClassLoader.js");
+load ("framework/ClassLoader.js");
 load ("Spark/midiinput.js");
 load ("Spark/sparkle.js");
 load ("Spark/Controller.js");
