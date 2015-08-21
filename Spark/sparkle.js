@@ -92,28 +92,27 @@ Sparkle.prototype.handleEvent = function (cc, value){
     switch(cc){
 
         case SPARKLE_TRANSPORT_REC:
-            Transport.record();
-//            this.surface.transport.record();
+            transport.record();
             println("record");
             break;
 
         case SPARKLE_TRANSPORT_STOP:
-//            this.surface.transport.stop();
+            transport.stop();
             println("stop");
             break;
 
         case SPARKLE_TRANSPORT_PLAY:
-//            this.surface.transport.togglePlay();
+            transport.togglePlay();
             println("toggle play");
             break;
 
         case SPARKLE_TRANSPORT_REWIND:
- //           Transport.rewind();
+            transport.rewind();
             println("rewind");
             break;
 
         case SPARKLE_TRANSPORT_FF:
- //           Transport.fastForward();
+            transport.fastForward();
             println("ffwd");
             break;
 

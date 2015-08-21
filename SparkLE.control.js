@@ -14,11 +14,13 @@ host.defineController ("Arturia", "SparkLE4Bitwig", "1.02", "B66809D0-479C-11E5-
 
 host.defineMidiPorts (1, 1);
 
+
 createDeviceDiscoveryPairs ("SparkLE");
 
 
 function init () {
     controller = new Controller ();
+    transport = host.createTransport();
     println ("Initialized.");
 }
 
