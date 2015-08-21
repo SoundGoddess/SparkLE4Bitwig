@@ -72,10 +72,10 @@ function Sparkle (output, input) {
 
 Sparkle.prototype = new AbstractControlSurface ();
 
-
 Sparkle.prototype.sendMidiEvent = function (status, data1, data2)
 {
     this.noteInput.sendRawMidiEvent (status, data1, data2);
+    println("status:" + status + ":" + data1 + ":" + data2);
 
 };
 
@@ -113,6 +113,12 @@ Sparkle.prototype.handleEvent = function (cc, value){
 
         case SPARKLE_TRANSPORT_FF:
             transport.fastForward();
+            println("ffwd");
+            break;
+
+
+        case SPARKLE_PAD_LOOP_ON:
+            transport.toggleLoop();
             println("ffwd");
             break;
 

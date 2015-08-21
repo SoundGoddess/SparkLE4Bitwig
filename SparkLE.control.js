@@ -21,8 +21,21 @@ createDeviceDiscoveryPairs ("SparkLE");
 function init () {
     controller = new Controller ();
     transport = host.createTransport();
+
+// this works but is a hack
+//    host.getMidiInPort(0).setMidiCallback(onMidi);
+
     println ("Initialized.");
 }
+
+
+// at least this prints stuff out
+function onMidi(status, data1, data2){
+
+    println("status:" + status + ":" + data1 + ":" + data2);
+
+}
+
 
 function exit () {
 
